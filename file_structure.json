@@ -1,5 +1,6 @@
 {
     "makefolders":[
+        "data/molgenis-data"
     ],
     "copyfiles":[
         {
