@@ -11,7 +11,7 @@ services:
        context: ./images/molgenis
        args:
           - MOLGENIS_VERSION=5.2.2
-    container_name:  §§INSTANCE--molgenis-app
+    container_name:  §§INSTANCE-molgenis-app
     ports:
         - "§§PORT1:8080"
     links:
