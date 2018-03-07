@@ -16,11 +16,11 @@ services:
         - "§§PORT1:8080"
     links:
         - §§INSTANCE-db:db
-        - §§INSTANCE-elasticsearch:elasticsearch
+        - §§INSTANCE-elastic:elasticsearch
     volumes_from:
       - §§INSTANCE-app-data
     depends_on:
-        - §§INSTANCE-elasticsearch
+        - §§INSTANCE-elastic
 
   §§INSTANCE-db:
     image: postgres:9.6-alpine
