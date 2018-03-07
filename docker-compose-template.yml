@@ -75,4 +75,4 @@ services:
     volumes:
       - ./data/molgenis-data:/opt/molgenis
       - ./data/db-data:/var/lib/postgresql/data
-      - ./data/es-data:/usr/share/elasticsearch/data
+
