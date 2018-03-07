@@ -1,0 +1,11 @@
+[
+   {
+      "id":"POSTGRES_PASSWORD",
+      "display_name":"Postgres Password for Molgenis User",
+      "type":"password",
+      "default_value":"Change the password in prodcution",
+      "description":"Postgres Password for Molgenis User",
+      "min_length": "1",
+      "max_length": "128"
+   }
+]

@@ -1,0 +1,63 @@
+version: '2'
+
+networks:
+    bibbox-default-network:
+      external: true
+
+services:
+
+  §§INSTANCE-molgenis-app:
+    build:
+       context: ./image/molgenis
+       args:
+          - MOLGENIS_VERSION=5.2.2
+    container_name:  §§INSTANCE--molgenis-app
+    ports:
+        - "§§PORT1:8080"
+    links:
+        - §§INSTANCE-db:db
+        - §§INSTANCE-elasticsearch:elasticsearch
+    volumes_from:
+      - §§INSTANCE-app-data
+    depends_on:
+        - §§INSTANCE-elasticsearch
+
+  §§INSTANCE-db:
+    image: postgres:9.6-alpine
+    container_name:  §§INSTANCE-db
+    environment:
+          - POSTGRES_USER=molgenis
+          - POSTGRES_PASSWORD=molgenis
+          - POSTGRES_DB=molgenis
+    volumes_from:
+          - §§INSTANCE-app-data
+
+  §§INSTANCE-elastic:
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.4.1
+    container_name:  §§INSTANCE-elastic
+    environment:
+          - cluster.name=molgenis
+          - bootstrap.memory_lock=true
+          - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+          - xpack.security.enabled=false
+    ulimits:
+          memlock:
+            soft: -1
+            hard: -1
+    volumes_from:
+      - §§INSTANCE-app-data
+
+    §§INSTANCE-opencpu:
+      container_name:  §§INSTANCE-opencpu
+      build:
+          context: .//images/opencpu
+      volumes_from:
+          - §§INSTANCE-app-data
+
+  §§INSTANCE-app-data:
+    image: busybox
+    container_name: §§INSTANCE-app-data
+    volumes:
+      - .data/molgenis-data:/opt/molgenis
+      - .data/db-data:/var/lib/postgresql/data
+      - .data/es-data:/usr/share/elasticsearch/data
