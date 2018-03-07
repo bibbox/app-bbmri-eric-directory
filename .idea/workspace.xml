@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4a07c02-dabf-4a10-b0bc-fa4f4251dffb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/INSTALL-APP.md" afterPath="$PROJECT_DIR$/INSTALL-APP.md" />
       <change beforePath="$PROJECT_DIR$/config/molgenis-server.properties" afterPath="$PROJECT_DIR$/config/molgenis-server.properties" />
-      <change beforePath="$PROJECT_DIR$/docker-compose-template.yml" afterPath="$PROJECT_DIR$/docker-compose-template.yml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,29 +14,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="appinfo.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appinfo.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BBMRI-ERIC_Logo no colour.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BBMRI-ERIC_Logo no colour.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="docker-compose-template.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="docker-compose-template.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docker-compose-template.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1030">
               <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="INSTALL-APP.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/INSTALL-APP.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="75">
+                <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -51,13 +47,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="molgenis-server.properties" pinned="false" current-in-tab="false">
+      <file leaf-file-name="molgenis-server.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/molgenis-server.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="install-screen-final.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/install-screen-final.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -74,8 +77,8 @@
       <file leaf-file-name="file_structure.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/file_structure.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+            <state relative-caret-position="165">
+              <caret line="11" column="73" lean-forward="false" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -121,8 +124,9 @@
         <option value="$PROJECT_DIR$/sys-info.json" />
         <option value="$PROJECT_DIR$/images/molgenis/Dockerfile" />
         <option value="$PROJECT_DIR$/file_structure.json" />
-        <option value="$PROJECT_DIR$/config/molgenis-server.properties" />
         <option value="$PROJECT_DIR$/docker-compose-template.yml" />
+        <option value="$PROJECT_DIR$/INSTALL-APP.md" />
+        <option value="$PROJECT_DIR$/config/molgenis-server.properties" />
       </list>
     </option>
   </component>
@@ -254,22 +258,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/INSTALL-APP.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install-screen-final.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/portinfo.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -349,26 +337,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose-template.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1030">
+          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/INSTALL-APP.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install-screen-final.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/file_structure.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        <state relative-caret-position="165">
+          <caret line="11" column="73" lean-forward="false" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="73" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/molgenis-server.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker-compose-template.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1030">
-          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>

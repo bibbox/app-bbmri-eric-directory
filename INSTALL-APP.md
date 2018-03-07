@@ -3,6 +3,9 @@
 ## Install Parameters
 
 
+##vm.max_map_count 
+!! sudo sysctl -w vm.max_map_count=262144
+
 ![FINAL](install-screen-01.png)
 
 ## Populate the Database
