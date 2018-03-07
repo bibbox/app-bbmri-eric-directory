@@ -20,6 +20,7 @@ services:
     volumes_from:
       - §§INSTANCE-app-data
     depends_on:
+        - §§INSTANCE-db
         - §§INSTANCE-elastic
 
   §§INSTANCE-db:
