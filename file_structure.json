@@ -5,6 +5,10 @@
         {
             "source": "images",
             "destination": "images"
+        },
+        {
+            "source": "config/molgenis-server.properties",
+            "destination": "data/molgenis-data/molgenis-server.properties"
         }
     ]
 }

@@ -13,8 +13,7 @@ RUN rm -r $CATALINA_HOME/webapps/ROOT \
     && mv molgenis-app-$MOLGENIS_VERSION.war $CATALINA_HOME/webapps/ROOT.war \
 	&& echo 'CATALINA_OPTS="-Xmx2g -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Dmolgenis.home=/opt/molgenis/ -Dopencpu.uri.port=8004"' > $CATALINA_HOME/bin/setenv.sh
 
-RUN mkdir -p /opt/molgenis \
-	&& if ! test -f /opt/molgenis/molgenis-server.properties; then echo -e "db_user=molgenis\ndb_password=molgenis\ndb_uri=jdbc\:postgresql\://db/molgenis\nadmin.password=admin\nelasticsearch.transport.addresses=elasticsearch:9300\nopencpu.uri.host=opencpu\npython_script_executable=/usr/bin/python3" > /opt/molgenis/molgenis-server.properties; fi
+RUN mkdir -p /opt/molgenis
 
 VOLUME /opt/molgenis
 
