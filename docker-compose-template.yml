@@ -12,20 +12,28 @@ services:
        args:
           - MOLGENIS_VERSION=5.2.2
     container_name:  §§INSTANCE-molgenis-app
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
     ports:
         - "§§PORT1:8080"
     links:
         - §§INSTANCE-db:db
         - §§INSTANCE-elastic:elasticsearch
+        - §§INSTANCE-opencpu:opencpu
     volumes_from:
       - §§INSTANCE-app-data
     depends_on:
         - §§INSTANCE-db
         - §§INSTANCE-elastic
+        - §§INSTANCE-opencpu
 
   §§INSTANCE-db:
     image: postgres:9.6-alpine
     container_name:  §§INSTANCE-db
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
     environment:
           - POSTGRES_USER=molgenis
           - POSTGRES_PASSWORD=molgenis
@@ -36,6 +44,9 @@ services:
   §§INSTANCE-elastic:
     image: docker.elastic.co/elasticsearch/elasticsearch:5.4.1
     container_name:  §§INSTANCE-elastic
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
     environment:
           - cluster.name=molgenis
           - bootstrap.memory_lock=true
@@ -49,9 +60,12 @@ services:
       - §§INSTANCE-app-data
 
   §§INSTANCE-opencpu:
-    container_name:  §§INSTANCE-opencpu
     build:
-       context: .//images/opencpu
+       context: ./images/opencpu
+    container_name:  §§INSTANCE-opencpu
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
     volumes_from:
         - §§INSTANCE-app-data
 
