@@ -8,7 +8,7 @@ services:
 
   §§INSTANCE-molgenis-app:
     build:
-       context: ./image/molgenis
+       context: ./images/molgenis
        args:
           - MOLGENIS_VERSION=5.2.2
     container_name:  §§INSTANCE--molgenis-app
@@ -47,12 +47,12 @@ services:
     volumes_from:
       - §§INSTANCE-app-data
 
-    §§INSTANCE-opencpu:
-      container_name:  §§INSTANCE-opencpu
-      build:
-          context: .//images/opencpu
-      volumes_from:
-          - §§INSTANCE-app-data
+  §§INSTANCE-opencpu:
+    container_name:  §§INSTANCE-opencpu
+    build:
+       context: .//images/opencpu
+    volumes_from:
+        - §§INSTANCE-app-data
 
   §§INSTANCE-app-data:
     image: busybox
