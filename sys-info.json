@@ -1,4 +1,4 @@
 {
-  runningcontainers:["§§INSTANCE--molgenis-app", "§§INSTANCE-db", "§§INSTANCE-elastic", "§§INSTANCE-opencpu" ],
+  runningcontainers:["§§INSTANCE-molgenis-app", "§§INSTANCE-db", "§§INSTANCE-elastic", "§§INSTANCE-opencpu" ],
   supportcontainers:["§§INSTANCE-app-data"]    
 }
