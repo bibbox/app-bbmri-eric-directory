@@ -10,7 +10,7 @@ services:
     build:
        context: ./images/molgenis
        args:
-          - MOLGENIS_VERSION=5.2.2
+          - MOLGENIS_VERSION=5.2.0-BBMRI-ERIC
     container_name:  §§INSTANCE-molgenis-app
     restart: unless-stopped
     networks:
