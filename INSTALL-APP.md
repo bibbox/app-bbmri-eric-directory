@@ -12,7 +12,7 @@ sudo sysctl -w vm.max_map_count=262144
 * user: admin
 * password: admin
 
-## Setup steps with a clean Molgenis (developrs information)
+## Setup steps with a clean Molgenis (developers information)
 
 ### Upload the Data Model
 
