@@ -14,21 +14,11 @@ sudo sysctl -w vm.max_map_count=262144
 * user: admin
 * password: admin
 
-
-## After the installation
-
-Have a nice ride with the new Admins youngtimer.
-![FINAL](install-screen-final.jpg)
-
 ## Setup steps with a clean Molgenis (developrs information)
 
 ### Upload the Data Model
 
 https://github.com/bibbox/app-bbmri-eric-directory/blob/master/eu_bbmri_eric-model.xlsx
-
-### Install the Biobank explorer‘ app in MOLGENIS. You can find it here:
-
-set the VIEW permissopn for all users
 
 
 #### create freemarker files, and upload content from github
