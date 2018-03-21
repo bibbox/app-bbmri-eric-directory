@@ -32,24 +32,20 @@ https://github.com/bibbox/app-bbmri-eric-directory/blob/master/eu_bbmri_eric-mod
 * Name: Biobank explorer
 * Resource ZIP file: https://github.com/bibbox/app-bbmri-eric-directory/blob/master/biobank-explorer.zip
 * Use freemarker template: Yes
-ÜLanding page HTML template: the view-biobank-explorer.ftl you added in previous steo
-
-
-### Activate the App and copy it’s URL and get the app ID out of it (the part of the URL after /menu/main/apps/)
-
+* Landing page HTML template: the view-biobank-explorer.ftl you added in previous steo
+* Activate the App and copy it’s URL and get the app ID out of it (the part of the URL after /menu/main/apps/)
 * Edit the freemarker template
-* Replace the app ID this line:
-   directoryLink: server + '/menu/main/apps/aaaacx4r5ehjr6qwhylusdiaai‘,
+* Replace the app ID this line: directoryLink: server + '/menu/main/apps/aaaacx4r5ehjr6qwhylusdiaai‘,
 
 ### Set the Google Analytics ID (if applicable)
    GA_KEY: 'UA-XXXXXXXX-X',
 
 
-6. Upload the BBMRI-ERIC bootstrap theme
+### Upload the BBMRI-ERIC bootstrap theme
 
 @MOLGENIS team: where can we find them?
 
-@MOLGENIS team: where can we find it?
+### Configuration
 
 * Configure settings:
 * Edit the home page to give some background on the Directory in Bibbox
