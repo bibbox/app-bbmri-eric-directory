@@ -7,8 +7,6 @@ NOTE: make sure the VM has a big enough max_map_count
 sudo sysctl -w vm.max_map_count=262144
 
 
-![FINAL](install-screen-01.png)
-
 ## Login
 
 * user: admin
