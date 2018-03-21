@@ -46,16 +46,17 @@ https://github.com/bibbox/app-bbmri-eric-directory/blob/master/eu_bbmri_eric-mod
 
 
 6. Upload the BBMRI-ERIC bootstrap theme
+
 @MOLGENIS team: where can we find them?
 
 @MOLGENIS team: where can we find it?
 
- 7. Configure settings:
- 7a. Edit the home page to give some background on the Directory in Bibbox
- 7b. Set the default menu to mimic the app menu
- 7c. Configure permissions
- 7d. Set the title
- 7e. Setup the mail configuration
- 7f. Upload a logo icon
+* Configure settings:
+* Edit the home page to give some background on the Directory in Bibbox
+* Set the default menu to mimic the app menu
+* Configure permissions
+* Set the title
+* Setup the mail configuration
+* Upload a logo icon
 
 make a screen capture
