@@ -50,7 +50,9 @@ https://github.com/bibbox/app-bbmri-eric-directory/blob/master/eu_bbmri_eric-mod
 * Configure settings:
 * Edit the home page to give some background on the Directory in Bibbox
 * Set the default menu to mimic the app menu
-* Configure permissions
+* Configure permissions:
+  * View permission for the anonymous user on the following plugins apps, home, dataexplorer, directory
+  * View permissions for the anonymous user on the following entities: eu_bbmri_eric_\*, sys_md_\*, sys_set_dataexplorer, sys_genomebrowser_\*, sys_FreemarkerTemplate, sys_L10nString, sys_Language, sys_negotiator_\*
 * Set the title
 * Setup the mail configuration
 * Upload a logo icon
