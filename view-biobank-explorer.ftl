@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html>
     <head>
         <meta charset=utf-8>
@@ -21,7 +21,7 @@
                 fallbackLng: 'en',
                 imageSourceLink: 'https://directory.bbmri-eric.eu/logo/bbmri-eric-logo-ohnezusatz.png',
                 menuLinks: {
-                    directoryLink: server + '/menu/main/${app.id}',
+                    directoryLink: server + '/menu/main/apps/${app.id}',
                     advancedDirectoryLink: server + '/menu/main/dataexplorer?entity=eu_bbmri_eric_collections&amp;mod=data&amp;attrs[]=country&amp;attrs[]=biobank&amp;attrs[]=collection&amp;hideselect=true',
                     rareDiseaseBiobanksLink: server + '/menu/main/dataexplorer?entity=eu_bbmri_eric_collections&amp;mod=data&amp;attrs%5B%5D=country&amp;attrs%5B%5D=biobank&amp;attrs%5B%5D=collection&amp;hideselect=true&amp;filter=type==RD',
                     userManualLink: server + '/menu/main/redirect?url=https://drive.google.com/file/d/0B0PMkmx_peQ7cmhkdFBncTRzSTg/view?usp=sharing',
