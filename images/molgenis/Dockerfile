@@ -6,7 +6,7 @@ ARG MOLGENIS_VERSION
 
 # --no-cache allows users to install packages with an index that is updated and used on-the-fly and not cached locally
 # This avoids the need to use --update and remove /var/cache/apk/* when done installing packages.
-RUN apk --no-cache add openssl python3 \
+RUN apt-get install openssl \
 	&& wget -O molgenis-app-bbmri-eric-5.2.0-BBMRI-ERIC.war https://github.com/molgenis/molgenis-bbmri-eric/releases/download/v5.2.0/molgenis-app-bbmri-eric-5.2.0-BBMRI-ERIC.war
 
 RUN rm -r $CATALINA_HOME/webapps/ROOT \

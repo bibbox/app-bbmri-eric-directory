@@ -1,0 +1,95 @@
+version: '2'
+
+# networks:
+#     bibbox-default-network:
+#       external: true
+
+services:
+
+  bibbox-molgenis-app:
+    build:
+       context: ./images/molgenis
+       args:
+          - MOLGENIS_VERSION=5.2.0-BBMRI-ERIC
+    container_name:  bibbox-molgenis-app
+    restart: unless-stopped
+    # networks:
+    #   - bibbox-default-network
+    ports:
+        - "80:8080"
+    links:
+        - bibbox-db:db
+        - bibbox-elastic:elasticsearch
+        - bibbox-opencpu:opencpu
+    environment:
+        - environment=production
+        - molgenis.home=/home/molgenis
+        - opencpu.uri.host=opencpu
+        - elasticsearch.transport.addresses=elasticsearch:9300
+        - db_uri=jdbc:postgresql://postgres/molgenis
+        - db_user=molgenis
+        - db_password=molgenis
+        - admin.password=admin
+        - MINIO_BUCKET_NAME=molgenis
+        - MINIO_ENDPOINT=http://minio:9000
+        - MINIO_ACCESS_KEY=molgenis
+        - MINIO_SECRET_KEY=molgenis
+
+    volumes_from:
+        - bibbox-app-data
+    depends_on:
+        - bibbox-db
+        - bibbox-elastic
+        - bibbox-opencpu
+
+  bibbox-db:
+    image: postgres:9.6-alpine
+    container_name:  bibbox-db
+    restart: unless-stopped
+    # networks:
+    #   - bibbox-default-network
+    environment:
+          - POSTGRES_USER=molgenis
+          - POSTGRES_PASSWORD=molgenis
+          - POSTGRES_DB=molgenis
+    volumes_from:
+          - bibbox-app-data
+
+  bibbox-elastic:
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.4.1
+    container_name:  bibbox-elastic
+    restart: unless-stopped
+    # networks:
+    #   - bibbox-default-network
+    environment:
+          - cluster.name=molgenis
+          - bootstrap.memory_lock=true
+          - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+          - xpack.security.enabled=false
+    ulimits:
+          memlock:
+            soft: -1
+            hard: -1
+    volumes_from:
+      - bibbox-app-data
+    ports:
+      - 9200:9200
+      - 9300:9300
+
+  bibbox-opencpu:
+    build:
+       context: ./images/opencpu
+    container_name:  bibbox-opencpu
+    restart: unless-stopped
+    # networks:
+    #   - bibbox-default-network
+    volumes_from:
+        - bibbox-app-data
+
+  bibbox-app-data:
+    image: busybox
+    container_name: bibbox-app-data
+    volumes:
+      - ./data/molgenis-data:/opt/molgenis
+      - ./data/db-data:/var/lib/postgresql/data
+
