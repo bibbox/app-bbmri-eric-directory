@@ -1,15 +1,13 @@
 {
-    "makefolders":[
-        "data/molgenis-data"
-    ],
-    "copyfiles":[
-        {
-            "source": "images",
-            "destination": "images"
-        },
-        {
-            "source": "config/molgenis-server.properties",
-            "destination": "data/molgenis-data/molgenis-server.properties"
-        }
-    ]
+  "makefolders":[
+    "data/var/lib/postgresql/data",
+    "data/usr/share/elasticsearch/data",
+    "data/home/molgenis"
+  ],
+  "copyfiles":[
+    {
+        "source":"backend.conf",
+        "destination":"data/backend.conf"
+    }
+  ]
 }
